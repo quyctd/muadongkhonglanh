@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>girls dict</title>
+  </head>
+  <body>
+
+    {% for girl in girls %}
+      <img src="{{ girl['image'] }}" alt="{{ girl['name'] }}">
+      <h4>{{ girl['name'] }}</h4>
+
+    {% endfor %}
+    <!-- <img src="{{girl['image']}}" alt="">
+    <h4>{{ girl['name'] }}</h4> -->
+  </body>
+</html>
