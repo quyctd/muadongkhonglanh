@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Delete</title>
+    <link rel="stylesheet" href="../static/css/homepage.css">
+    {% include 'boostrap.html' %}
+  </head>
+  <body class="full-font">
+    <div class="container">
+      <form class="" action="" method="get">
+        {% for girl in girls %}
+
+
+          <h1>{{girl.name}}</h1>
+
+
+        {% endfor %}
+        <input class="btn btn-primary" type="submit" name="" value=" Save changes">
+
+      </form>
+    </div>
+
+  </body>
+</html>

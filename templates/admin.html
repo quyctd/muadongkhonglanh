@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      table, th, td {
+
+        border-collapse: collapse;
+      }
+      th, td {
+          padding: 20px;
+          width: 0px;
+      }
+      th {
+        text-align: center;
+      }
+      table {
+        border-spacing: 5px;
+      }
+      table#t01 tr:nth-child(even) {
+        background-color: #eee;
+      }
+      table#t01 tr:nth-child(odd) {
+         background-color:#fff;
+      }
+      table#t01 th {
+          background-color: black;
+          color: white;
+      }
+      i{ color: green;}
+      a{ color: blue;
+      text-decoration: none !important;}
+    </style>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/homepage.css">
+    {% include '/headfooter/boostrap.html' %}
+
+  </head>
+  <body class="full-font">
+    <!-- Navbar -->
+
+    <!-- Page Content -->
+    <div class="container-fluid">
+      <a href="add-girl"><button class="btn btn-sm btn-primary float-right mt-2 mb-2">Thêm</button></a>
+
+      <br><hr>
+      <table  id='t01'>
+        <thead>
+          <tr class="row">
+            <th class="col-md-1">STT</th>
+            <th class="col-md-1">ID</th>
+            <th class="col-md-1">Thao tác</th>
+            <th class="col-md-2">Tên</th>
+            <th class="col-md-5">Info</th>
+            <th class="col-md-2">Ảnh</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for girl in girls %}
+          <tr  class="row">
+            <td class="col-md-1">{{ loop.index }}</td>
+            <td class="col-md-1">{{ girl.g_id }}</td>
+            <td class="col-md-1">
+              <!--
+              <div><a href="/delete/{{ girl.name }}"><i class="fa fa-trash fa-lg" aria-hidden="true"></i>Xóa</button></div> -->
+              <div><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i>Sửa</div>
+              <form action="{{ url_for('remove', id=girl.g_id ) }}" method="post" >
+
+                <input type="hidden"  value={{girl.name}} name="girlname">
+                <span><button type="submit" class="btn btn-link" name="button"><i class="fa fa-trash" aria-hidden="true"></i>Xóa</button></span>
+
+              </form>
+            </td>
+            <td class="col-md-2">{{ girl.name }}</td>
+
+            <td class="col-md-5">{{ girl.description }}</td>
+            <td class="col-md-2"><a target="_blank" href= {{ girl.image }}> Xem ảnh </a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+
+      </table>
+    </div>
+
+
+
+
+    <!-- Footer -->
+  
+    {% include 'headfooter/scripts.html' %}
+  </body>
+</html>
