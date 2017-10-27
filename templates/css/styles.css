@@ -1,0 +1,65 @@
+body{
+
+
+
+
+  font-family: 'Annie Use Your Telescope', cursive;
+
+
+
+
+
+
+}
+span{
+  font-style: normal;
+  font-size: 100px;
+  font-weight: bolder;
+  /*color: transparent;*/
+}
+h2
+{
+  text-align: center;
+  color: blue;
+  font-size: 70px;
+  font-weight: 900;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+h2:hover{
+  color: red;
+  font-size: 100px;
+}
+div:first-of-type>div{
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  margin: 
+}
+#background {
+
+  width: 100%;
+  background-image: url('http://thegioicasi.com/wp-content/uploads/2017/03/hot_girl_indo.jpg');
+  background-color: lightgreen;
+  height: 500px;
+  background-repeat: no-repeat;
+
+    /* Center and scale the image nicely */
+/*    background-position: center; */
+
+  background-size: cover;
+  background-attachment: fixed;
+
+}
+/* body, html {
+    height: 100%;
+} */
+
+div:first-of-type{
+  height: 200px;
+  background-color: lightgrey;
+}
+div:last-of-type{
+  height: 50px;
+  background-color: lightgrey;
+}

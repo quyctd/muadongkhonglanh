@@ -64,13 +64,14 @@
             <td class="col-md-1">
               <!--
               <div><a href="/delete/{{ girl.name }}"><i class="fa fa-trash fa-lg" aria-hidden="true"></i>Xóa</button></div> -->
-              <div><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i>Sửa</div>
-              <form action="{{ url_for('remove', id=girl.g_id ) }}" method="post" >
+              <a href="/update-girl/{{girl.id}}"><div><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i>Sửa</div></a>
+              <!-- <form action="{{ url_for('remove', id=girl.g_id ) }}" method="post" >
 
-                <input type="hidden"  value={{girl.name}} name="girlname">
+                <input type="hidden"  value={{girl.name}} name="girlname"> -->
+                <a href="/delete-girl/{{girl.id}}">
                 <span><button type="submit" class="btn btn-link" name="button"><i class="fa fa-trash" aria-hidden="true"></i>Xóa</button></span>
-
-              </form>
+                </a>
+              <!-- </form> -->
             </td>
             <td class="col-md-2">{{ girl.name }}</td>
 
@@ -87,7 +88,7 @@
 
 
     <!-- Footer -->
-  
+
     {% include 'headfooter/scripts.html' %}
   </body>
 </html>

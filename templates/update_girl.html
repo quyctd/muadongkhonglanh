@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    {% include "headfooter/boostrap.html" %}
+    <link rel="stylesheet" href="../static/css/homepage.css">
+  </head>
+  <body class="full-font">
+    {% include 'headfooter/header.html' %}
+
+    <br><br><br>
+    <h1 class="text-center text-primary">Girl Update</h1>
+    <div class="container">
+
+        <form class="" action="" method="post">
+          <div class="form-group">
+            <label for="">Tên:</label>
+            <input class="form-control" type="text" name="name" value="{{girl.name}}" required>
+          </div>
+          <div class="form-group">
+            <label for="">Ảnh cũ:</label><br>
+            <img class="img-fluid" src="{{girl.image}}" alt="IMAGE">
+
+          </div>
+          <div class="form-group">
+            <label for="">link ảnh mới:</label>
+            <input class="form-control" type="text" name="image" placeholder="Điền link hộ bố m cái" value="" required>
+          </div>
+          <div class="form-group">
+            <label for="">Info:</label>
+            <textarea class="form-control" type="text" name="description" rows="3" required>{{girl.description}}</textarea>
+          </div>
+          <input class="btn btn-primary" type="submit" name="" value=" Save Changes">
+
+      </form>
+    </div>
+    {% include 'headfooter/footer.html' %}
+  </body>
+</html>
