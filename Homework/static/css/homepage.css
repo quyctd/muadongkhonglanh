@@ -1,0 +1,67 @@
+.full-font {
+  /*font-family: 'Lustria', serif;*/
+  /*font-family: 'VT323', monospace;*/
+  font-family: 'Noto Serif', serif;
+
+
+}
+.carousel-caption
+{
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: initial;
+  text-align: left;
+}
+.bs-docs-footer {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    margin-top: 100px;
+    color: #99979c;
+    text-align: center;
+    background-color: #343a40;
+
+}
+.style_title
+{
+  /*font-family: 'Audiowide', cursive;*/
+  font-family: 'Fredoka One', cursive;
+
+}
+.backnav
+{
+
+  background-color: #f8f8f8;
+  border-color: #e7e7e7;
+}
+.font-color{
+  color: #0084ff !important;
+}
+.hero
+{
+  color: #f8f8f8;
+  margin-top: 50px;
+  background-image: url(https://www.pexels.com/assets/headers/night-large-14684c34f5c19e03f74b37fb1932bb0df77ab93891288015a95c31ffeb3d7ec3.jpg);
+
+}
+
+.l-container{
+  position: relative;
+  padding: 90px 0 90px;
+}
+.l-container h1{
+  font-size: 60px;
+  padding: 5px;
+}
+.search{
+  padding: 0 15px;
+}
+.search div {
+    position: relative;
+    width: 600px;
+    max-width: 100%;
+    margin: 25px auto;
+}
+.flip {
+  -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
